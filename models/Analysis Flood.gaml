@@ -1,9 +1,8 @@
 /**
-* Name: OSM file to Agents
-* Author:  Patrick Taillandier
-* Description: Model which shows how to import a OSM File in GAMA and use it to create Agents. In this model, a filter is done to take only into account the roads 
-* and the buildings contained in the file. 
-* Tags:  load_file, osm, gis
+* Name: Analyse Sketch map
+* Author:  Franck Taillandier
+* Description: Model which analyses agentified sketch maps - Application to flood at Le Val
+* Tags:  sketch map, map analysis, Application Draw and flood
 */
 model FloodNV2
 
@@ -126,9 +125,8 @@ if not (self overlaps world) {
 
 
 	if !mode_no_protec {
-	
-	loop it from:41 to:41 {
-	//loop it from:1 to:numplaymax {
+
+	loop it from:1 to:numplaymax {
 	shape_file flood_shp <-shape_file("../generated/objects/Play"+it+".shp");
 		bool di<-false;
 		bool da<-false;
