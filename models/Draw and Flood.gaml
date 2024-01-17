@@ -1,16 +1,15 @@
 /**
-* Name: OSM file to Agents
-* Author:  Patrick Taillandier
-* Description: Model which shows how to import a OSM File in GAMA and use it to create Agents. In this model, a filter is done to take only into account the roads 
-* and the buildings contained in the file. 
-* Tags:  load_file, osm, gis
+* Name: Draw and Flood
+* Author:  Franck Taillandier
+* Description: Model which simulates flood from agentified sketch map, Application to Le Val
+* Tags:  flood simulation, game, sketch map
 */
-model FloodNV2
+model Draw_and_Flood
 
 
 global
 {
-	int nb_pl<-42;
+	int nb_pl<-12;
 	float cell_size<-1.0;
 	string numplay<-string(nb_pl);
 	bool mode_no_protec<-false;
